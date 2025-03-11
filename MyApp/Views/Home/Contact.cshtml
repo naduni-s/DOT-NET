@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<h1>Contact Us</h1>
+
+@if (ViewData["Message"] != null)
+{
+    <p style="color: green;">@ViewData["Message"]</p>
+}
+
+<form method="post">
+    <label>Name:</label>
+    <input type="text" name="name" required /><br /><br />
+
+    <label>Email:</label>
+    <input type="email" name="email" required /><br /><br />
+
+    <label>Message:</label><br />
+    <textarea name="message" required></textarea><br /><br />
+
+    <button type="submit">Submit</button>
+</form>
